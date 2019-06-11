@@ -63,7 +63,7 @@ FileList construct_path_list(int argc, char **argv, char const *filename) {
     FILE *file = 0;
 
     if (!filename) {
-    } else if (!strcmp(filename, "-")) {
+    } else if (strcmp(filename, "-") == 0) {
         file = stdin;
     } else {
         file = fopen(filename, "r");
